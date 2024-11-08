@@ -6,11 +6,27 @@
     justify-content: center;
     align-items: center;
     gap: 0rem;
+
+    background-color: rgb(var(--bgcol));
+
+    transition: 300ms background-color, 300ms color;
+
+    cursor: default;
+    user-select: none;
+
+    border-radius: 0.75rem;
+}
+
+.card:hover {
+    transition: 200ms background-color, 200ms color;
+
+    background-color: rgb(var(--color));
+    color: rgb(var(--bgcol));
 }
 
 .card .cardname {
     font-weight: 500;
-    color: rgb(var(--color) / 0.5);
+    opacity: 0.5;
 }
 
 .card .cardvalue {
@@ -19,5 +35,5 @@
 }
 
 .card .cardunit {
-    color: rgb(var(--color) / 0.5);
+    opacity: 0.5;
 }
