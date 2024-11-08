@@ -8,7 +8,7 @@ export default function Card({ scalar, unit, precision, cardname, ...props }: {[
     const reference = useRef(null)
 
     const update = function (ms) {
-        reference.current.innerText = `${(scalar * (ms ?? 0) / 1000).toFixed(precision)} ${unit}` 
+        reference.current.innerText = `${(String((scalar * (ms ?? 0) / 1000).toFixed(precision))).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}` 
         requestAnimationFrame(update)
     }
 
@@ -16,6 +16,7 @@ export default function Card({ scalar, unit, precision, cardname, ...props }: {[
 
     return <div className="card" {...props} >
         <h2 className="cardname">{cardname}</h2>
-        <h3 className="cardvalue" ref={reference}>0 {unit}</h3>
+        <h3 className="cardvalue" ref={reference}>0</h3>
+        <p className="cardunit">{unit}</p>
     </div>
 }

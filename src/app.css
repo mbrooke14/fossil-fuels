@@ -1,0 +1,42 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding-block: 4rem;
+}
+
+main {
+    width: 100dvw;
+    max-width: 64rem;
+}
+
+header {
+    width: 100dvw;
+    max-width: 64rem;
+    height: 20rem;
+
+    border-radius: 0.75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(var(--color));
+    color: rgb(var(--bgcol));
+}
+
+footer {
+    position: fixed;
+    inset-inline: 0px;
+    inset-block-end: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1#title {
+    font-size: 2rem;
+}

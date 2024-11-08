@@ -1,9 +1,16 @@
 :root {
     color-scheme: light;
+
+    --color:   0   0   0;
+    --bgcol: 255 255 255;
 }
 
 body {
     min-height: 100vh;
+    font-family: "Mona Sans";
+
+    background-color: rgb(var(--bgcol));
+    color: rgb(var(--color));
 }
 
 *, *::before, *::after {
