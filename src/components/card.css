@@ -37,3 +37,7 @@
 .card .cardunit {
     opacity: 0.5;
 }
+
+.card#time {
+    grid-column: 1 / -1;
+}
